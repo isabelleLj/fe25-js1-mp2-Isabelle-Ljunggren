@@ -1,0 +1,27 @@
+
+
+body{
+    background-color: darkslategray;
+    color: orange;
+    position: relative;
+}
+
+#main{
+    position: absolute;
+    width: 40rem;
+    top: 1rem;
+    left: 15rem;
+}
+
+img{
+    
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    width: 40rem;
+   
+}
+
+    
+
+
