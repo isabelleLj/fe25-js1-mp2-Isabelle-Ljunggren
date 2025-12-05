@@ -8,12 +8,14 @@
   </head>
   <body>
     <main id="main">
-      <h1>The dice game</h1>
+      <form>
+        <h1>Pig - The Dice Game</h1>
 
-      <h2>Write your name:</h2>
+        <label for="pname">Your name:</label>
+        <input type="text" required id="pname" />
+        <button id="submit">Submit</button>
 
-      <form id="nameForm">
-        <input type="text" id="nameInput" placeholder="Ditt namn" required />
+        <h2 id="displayName">Player:</h2>
       </form>
 
       <h2 id="diceResult">Dice landed on:</h2>

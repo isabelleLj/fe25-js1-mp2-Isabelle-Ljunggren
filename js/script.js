@@ -5,21 +5,33 @@
 let numberOfRounds = 0;
 let score = 0;
 let totalScore = 0;
+let playerName = 'Walter White'; // Default name if player doesnt pick name
+
+
+
+const nameSubmit = document.querySelector('#submit');
+const input = document.querySelector('input');
+const displayName = document.querySelector('#displayName');
+
+
 
 const main = document.querySelector('main');
-
-const playerName = document.querySelector('#playerName');
-
-
 const totalPoints = document.querySelector('#totalPoints');
 const roundScore = document.querySelector('#roundScore');
 const yourRounds = document.querySelector('#yourRounds');
-
 
 const btnRoll = document.querySelector('#roll');
 const btnHold = document.querySelector('#hold');
 const btnNewGame = document.querySelector('New Game')
 
+
+
+
+function updateName(event){
+    event.preventDefault();
+    playerName = input.value;
+    displayName.innerText = `Player: ${playerName}`;
+}
 
 
 
@@ -61,14 +73,14 @@ function hold(event){
 
 function endOfGame(){
     if (totalScore >= 100){
-    alert(`congratulations, you won the game!\nTotal points: ${totalScore}\nAntal omgångar: ${numberOfRounds}`);
+    alert(`Congratulations, you won the game!\nTotal points: ${totalScore}\nAntal omgångar: ${numberOfRounds}`);
     }
 }
 
 
 
 
-
+nameSubmit.addEventListener('click', updateName);
 btnRoll.addEventListener('click', theDiceRoll);
 btnHold.addEventListener('click', hold);
 
